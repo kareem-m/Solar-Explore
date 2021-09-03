@@ -1,0 +1,158 @@
+/* Make sure you place the base color of the website in a variable */
+:root {
+  --main-color: #0077ff;
+}
+/* The main styles */
+* {
+  box-sizing: border-box;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  transition: 0.5s;
+}
+html {
+  scroll-behavior: smooth;
+  /* For change scroll bar in firefox*/
+  scrollbar-color: var(--main-color, #07f) #000;
+  scrollbar-width: thin; /*or auto*/
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+::selection {
+  background-color: var(--main-color, #07f);
+  color: #fff;
+}
+
+/* For change scroll bar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 0;
+}
+::-webkit-scrollbar-track {
+  background: var(--main-background, #000);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--main-color, #07f);
+}
+::-webkit-scrollbar-thumb:hover {
+  border: 1px solid #000;
+}
+
+/* global values */
+h1 { font-size: 2.2em; }
+p {
+  color: #ccc;
+  line-height: 2;
+}
+@media (max-width: 500px) {
+  h1 { font-size: 1.7em; }
+  p { font-size: 14px; }
+}
+@media (max-width: 350px) {
+  h1 { font-size: 1.5em; }
+  p { font-size: 12px;}
+}
+
+ul, ol {
+  margin: 0;
+  padding: 0;
+}
+li { list-style: none; }
+a {
+  text-decoration: none;
+  user-select: none;
+}
+hr {
+  width: 70%;
+  border-color: var(--main-color, #07f);
+  margin: 25px auto;
+}
+nav, footer { user-select: none; }
+img {
+  pointer-events: none;
+  user-select: none;
+}
+
+form input:not([type="submit"]) {
+  padding: 10px 50px 10px 10px;
+  caret-color: var(--main-color, #07f);
+}
+[type="submit"] {
+  padding: 10px;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+form input:not([type="submit"]):focus,
+[type="submit"]:focus {
+  outline: 0;
+}
+textarea {
+  resize: none; /* both */
+}
+
+/* Framework */
+.max-width {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Small screens */
+@media (min-width: 768px) {
+  .max-width {
+    width: 750px;
+  }
+}
+/* Medium screens */
+@media (min-width: 992px) {
+  .max-width {
+    width: 970px;
+  }
+}
+/* Large screens */
+@media (min-width: 1200px) {
+  .max-width {
+    width: 1170px;
+  }
+}
+
+.center-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.center-position {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.button, .button-rev {
+  padding: 5px 10px;
+  text-transform: capitalize;
+  border-radius: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.button {
+  background-color: var(--main-color, #07f);
+  border: 2px solid var(--main-color, #07f);
+  color: #fff;
+}
+.button:hover {
+  background-color: transparent;
+  color: var(--main-color, #07f);
+}
+.button-rev {
+  border: 2px solid var(--main-color, #07f);
+  color: var(--main-color, #07f);
+}
+.button-rev:hover {
+  background-color: var(--main-color, #07f);
+  color: #fff;
+}

@@ -1,0 +1,857 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;0,800;0,900;1,300;1,400&display=swap");
+body {
+  background-color: #000;
+  color: #fff;
+}
+
+body a {
+  color: #fff;
+}
+
+body p {
+  max-width: 100%;
+}
+
+@media (max-width: 450px) {
+  body p {
+    max-width: 85%;
+  }
+}
+
+@media (max-width: 370px) {
+  body p {
+    max-width: 75%;
+  }
+}
+
+body .meteors {
+  height: 480px;
+  width: 100%;
+  background: url(../media/images/meteors.png) center;
+  position: relative;
+  -webkit-animation: meteorsAnimate 30s linear infinite;
+          animation: meteorsAnimate 30s linear infinite;
+}
+
+body .meteors:not(:last-of-type) {
+  margin: -50px 0 50px;
+}
+
+@-webkit-keyframes meteorsAnimate {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 852px 0;
+  }
+}
+
+@keyframes meteorsAnimate {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 852px 0;
+  }
+}
+
+body .meteors span {
+  position: absolute;
+  font-size: 20px;
+  color: #ccc;
+  top: 100px;
+  left: 50px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  z-index: -1;
+}
+
+body section {
+  padding: 30px 0;
+  overflow: hidden;
+}
+
+body section:not(:last-of-type) {
+  margin-bottom: 100px;
+}
+
+body section .max-width {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(400px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+}
+
+body section .max-width .planet {
+  border-radius: 50%;
+  background-repeat: repeat-x;
+  -webkit-animation: animate 100s linear infinite;
+          animation: animate 100s linear infinite;
+  margin-top: 50px;
+  position: relative;
+}
+
+@media (max-width: 990px) {
+  body section .max-width .planet {
+    margin: 0 auto 50px !important;
+  }
+}
+
+@-webkit-keyframes animate {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -2048px 0;
+  }
+}
+
+@keyframes animate {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -2048px 0;
+  }
+}
+
+body section .max-width .planet .moo {
+  background-repeat: repeat-x;
+  border-radius: 50%;
+  position: absolute;
+  -webkit-box-shadow: inset 0 0 5px #000, 0 0 50px #7d717190;
+          box-shadow: inset 0 0 5px #000, 0 0 50px #7d717190;
+  -webkit-animation: moon 250s linear infinite;
+          animation: moon 250s linear infinite;
+}
+
+@-webkit-keyframes moon {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -2048px 0;
+  }
+}
+
+@keyframes moon {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -2048px 0;
+  }
+}
+
+body section .max-width .planet .moo.moon1 {
+  top: 70px;
+  right: 115px;
+}
+
+@media (max-width: 800px) {
+  body section .max-width .planet .moo.moon1 {
+    top: 108px;
+    right: 430px;
+  }
+}
+
+body section .max-width .planet .moo.moon2 {
+  top: 450px;
+  right: 20px;
+}
+
+@media (max-width: 800px) {
+  body section .max-width .planet .moo.moon2 {
+    top: 500px;
+    right: 310px;
+  }
+}
+
+body section .max-width .planet .moo.moon3 {
+  top: 180px;
+  right: -80px;
+}
+
+@media (max-width: 800px) {
+  body section .max-width .planet .moo.moon3 {
+    top: 380px;
+    right: 450px;
+  }
+}
+
+body section .max-width .information h1 {
+  margin-top: 0;
+}
+
+nav {
+  background-color: #00000050;
+  position: -webkit-sticky;
+  position: sticky;
+  inset: 0;
+  z-index: 99999;
+}
+
+nav .max-width {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 60px;
+}
+
+nav .max-width .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav .max-width .logo a img {
+  width: 30px;
+}
+
+nav .max-width .logo a:last-of-type {
+  font-size: 18px;
+  margin-left: 10px;
+}
+
+nav .max-width .links label {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+nav .max-width .links input {
+  display: none;
+}
+
+nav .max-width .links input:checked ~ ul {
+  right: 0;
+}
+
+nav .max-width .links ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 200px;
+  height: 100vh;
+  position: fixed;
+  top: 60px;
+  right: -201px;
+  background-color: #00000050;
+  padding: 15px;
+}
+
+nav .max-width .links ul li {
+  margin: 15px 0;
+}
+
+nav .max-width .links ul li a {
+  color: #fff;
+  padding: 15px;
+  position: relative;
+}
+
+nav .max-width .links ul li a:hover {
+  color: #0077ff;
+}
+
+nav .max-width .links ul li a:hover::before {
+  width: 50px;
+}
+
+nav .max-width .links ul li a::before {
+  content: "";
+  height: 2px;
+  width: 0;
+  background-color: #0077ff;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.landing {
+  min-height: 100vh;
+}
+
+.landing video {
+  position: absolute;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  pointer-events: none;
+  background-color: #000;
+  z-index: -1;
+  max-width: 100%;
+}
+
+.landing video + .overlay {
+  background-color: #00000038;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.landing .max-width .text {
+  padding-top: 120px;
+}
+
+.landing .max-width .text h2 {
+  letter-spacing: 3px;
+  margin: 0 0 15px;
+  line-height: 0;
+}
+
+.landing .max-width .text h1 {
+  margin: 0;
+  text-transform: capitalize;
+}
+
+.landing .max-width .text p {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.landing .max-width .text i {
+  display: inline-block;
+  font-size: 30px;
+  cursor: pointer;
+  -webkit-animation: topAndDown 2s linear infinite;
+  animation: topAndDown 2s linear infinite;
+}
+
+@-webkit-keyframes topAndDown {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes topAndDown {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+section.sun .max-width .sun {
+  background: url(../media/images/sun.jpg) center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 1000px;
+  height: 1000px;
+  margin: -350px 0 0 -500px;
+}
+
+@media (max-width: 990px) {
+  section.sun .max-width .sun {
+    margin: -500px 0 0 -150px;
+  }
+}
+
+section.mercury .max-width .mercury {
+  background: url(../media/images/mercury.jpg) center;
+  background-size: cover;
+  width: 200px;
+  height: 200px;
+  -webkit-transform: rotate(-3.38deg);
+          transform: rotate(-3.38deg);
+  -webkit-box-shadow: inset 0 0 20px #000, 0 0 50px #e8927c70;
+          box-shadow: inset 0 0 20px #000, 0 0 50px #e8927c70;
+}
+
+section.venus .max-width .venus {
+  background: url(../media/images/Venus.jpg) center;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+  -webkit-transform: rotate(-3.86deg);
+          transform: rotate(-3.86deg);
+  -webkit-box-shadow: inset 0 0 20px #000, 0 0 50px #b45d1570;
+          box-shadow: inset 0 0 20px #000, 0 0 50px #b45d1570;
+}
+
+section.earth .max-width .earth {
+  background: url(../media/images/earth.jpg) center;
+  background-size: cover;
+  width: 400px;
+  height: 400px;
+  margin: 0 0 0 -50px;
+  -webkit-transform: rotate(-23.5deg);
+          transform: rotate(-23.5deg);
+  -webkit-box-shadow: inset 0 0 20px #000, 0 0 50px #3a468070;
+          box-shadow: inset 0 0 20px #000, 0 0 50px #3a468070;
+}
+
+section.earth .max-width .earth .moon {
+  width: 50px;
+  height: 50px;
+  background: url(../media/images/moon.jpg) center;
+  background-size: cover;
+  top: 180px;
+  right: -100px;
+  -webkit-transform: rotate(-28.58deg);
+          transform: rotate(-28.58deg);
+}
+
+@media (max-width: 800px) {
+  section.earth .max-width .earth .moon {
+    top: 390px;
+    right: 330px;
+  }
+}
+
+section.earth .max-width .earth .moon span {
+  position: absolute;
+  top: -25px;
+  right: -40px;
+  -webkit-transform: rotate(50deg);
+          transform: rotate(50deg);
+}
+
+section.mars .max-width .mars {
+  background: url(../media/images/mars.jpg) center;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+  margin: 0 0 0 -50px;
+  -webkit-transform: rotate(-5.65deg);
+          transform: rotate(-5.65deg);
+  -webkit-box-shadow: inset 0 0 20px #000, 0 0 50px #e55f4570;
+          box-shadow: inset 0 0 20px #000, 0 0 50px #e55f4570;
+}
+
+section.mars .max-width .mars .deimos {
+  width: 50px;
+  height: 50px;
+  background: url(../media/images/titan.png) center;
+  background-size: cover;
+  top: 55px;
+  right: -190px;
+  -webkit-transform: rotate(-0.93deg);
+          transform: rotate(-0.93deg);
+}
+
+@media (max-width: 800px) {
+  section.mars .max-width .mars .deimos {
+    top: 55px;
+    right: 270px;
+  }
+}
+
+section.mars .max-width .mars .deimos span {
+  position: absolute;
+  top: -25px;
+  right: -40px;
+  -webkit-transform: rotate(10deg);
+          transform: rotate(10deg);
+}
+
+section.mars .max-width .mars .phoebos {
+  width: 50px;
+  height: 50px;
+  background: url(../media/images/moon.jpg) center;
+  background-size: cover;
+  top: 230px;
+  right: -85px;
+  -webkit-transform: rotate(0);
+          transform: rotate(0);
+}
+
+@media (max-width: 800px) {
+  section.mars .max-width .mars .phoebos {
+    top: 310px;
+    right: 75px;
+  }
+}
+
+section.mars .max-width .mars .phoebos span {
+  position: absolute;
+  top: -25px;
+  right: -40px;
+  -webkit-transform: rotate(10deg);
+          transform: rotate(10deg);
+}
+
+section.jupiter .max-width .jupiter {
+  background: url(../media/images/jupiter.jpg) center;
+  background-size: cover;
+  width: 600px;
+  height: 600px;
+  margin: 0 0 0 -150px;
+  -webkit-transform: rotate(-5.65deg);
+          transform: rotate(-5.65deg);
+  -webkit-box-shadow: inset 0 0 20px #000, 0 0 50px #ffa50070;
+          box-shadow: inset 0 0 20px #000, 0 0 50px #ffa50070;
+}
+
+section.jupiter .max-width .jupiter .io {
+  width: 50px;
+  height: 50px;
+  background: url(../media/images/io.jpg) center;
+  background-size: cover;
+  -webkit-transform: rotate(-0.93deg);
+          transform: rotate(-0.93deg);
+}
+
+section.jupiter .max-width .jupiter .io span {
+  position: absolute;
+  top: -25px;
+  right: -40px;
+  -webkit-transform: rotate(10deg);
+          transform: rotate(10deg);
+}
+
+section.jupiter .max-width .jupiter .europa {
+  width: 50px;
+  height: 50px;
+  background: url(../media/images/europa.jpg) center;
+  background-size: cover;
+  -webkit-transform: rotate(0);
+          transform: rotate(0);
+}
+
+section.jupiter .max-width .jupiter .europa span {
+  position: absolute;
+  top: -25px;
+  right: -40px;
+  -webkit-transform: rotate(10deg);
+          transform: rotate(10deg);
+}
+
+section.jupiter .max-width .jupiter .ganymede {
+  width: 50px;
+  height: 50px;
+  background: url(../media/images/titan.png) center;
+  background-size: cover;
+  -webkit-transform: rotate(0);
+          transform: rotate(0);
+}
+
+section.jupiter .max-width .jupiter .ganymede span {
+  position: absolute;
+  top: -25px;
+  right: -40px;
+  -webkit-transform: rotate(10deg);
+          transform: rotate(10deg);
+}
+
+section.jupiter .max-width .information {
+  margin-top: 100px;
+}
+
+section.saturn .max-width .saturn {
+  background: url(../media/images/saturn.jpg) center;
+  background-size: cover;
+  width: 550px;
+  height: 550px;
+  margin: 0 0 0 -150px;
+  -webkit-transform: rotate(-2.485deg);
+          transform: rotate(-2.485deg);
+  -webkit-box-shadow: inset 0 0 20px #000, 0 0 50px #b29d8170;
+          box-shadow: inset 0 0 20px #000, 0 0 50px #b29d8170;
+  position: relative;
+}
+
+section.saturn .max-width .saturn::before {
+  content: "";
+  position: absolute;
+  top: 35%;
+  left: -48%;
+  width: 1130px;
+  height: 115px;
+  background: url(../media/images/ring.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-transform: rotate(-2.485deg);
+          transform: rotate(-2.485deg);
+}
+
+section.saturn .max-width .saturn .dione {
+  width: 50px;
+  height: 50px;
+  background: url(../media/images/dione.jpg) center;
+  background-size: cover;
+  -webkit-transform: rotate(-0.93deg);
+          transform: rotate(-0.93deg);
+}
+
+section.saturn .max-width .saturn .dione span {
+  position: absolute;
+  top: -25px;
+  right: -40px;
+  -webkit-transform: rotate(10deg);
+          transform: rotate(10deg);
+}
+
+section.saturn .max-width .saturn .titan {
+  width: 50px;
+  height: 50px;
+  background: url(../media/images/titan.png) center;
+  background-size: cover;
+  -webkit-transform: rotate(0);
+          transform: rotate(0);
+}
+
+section.saturn .max-width .saturn .titan span {
+  position: absolute;
+  top: -25px;
+  right: -40px;
+  -webkit-transform: rotate(10deg);
+          transform: rotate(10deg);
+}
+
+section.saturn .max-width .saturn .enceladus {
+  width: 50px;
+  height: 50px;
+  background: url(../media/images/moon.jpg) center;
+  background-size: cover;
+  -webkit-transform: rotate(0);
+          transform: rotate(0);
+}
+
+section.saturn .max-width .saturn .enceladus span {
+  position: absolute;
+  top: -25px;
+  right: -40px;
+  -webkit-transform: rotate(10deg);
+          transform: rotate(10deg);
+}
+
+section.saturn .max-width .information {
+  margin-top: 30px;
+  z-index: 2;
+}
+
+section.uranus .max-width .uranus {
+  background: url(../media/images/uranus.png) center;
+  background-size: cover;
+  width: 480px;
+  height: 480px;
+  margin: 0 0 0 -150px;
+  -webkit-transform: rotate(-2.485deg);
+          transform: rotate(-2.485deg);
+  -webkit-box-shadow: inset 0 0 20px #000, 0 0 50px #8dcdd870;
+          box-shadow: inset 0 0 20px #000, 0 0 50px #8dcdd870;
+  position: relative;
+}
+
+section.uranus .max-width .uranus .miranda {
+  width: 50px;
+  height: 50px;
+  background: url(../media/images/miranda.jpg) center;
+  background-size: cover;
+  -webkit-transform: rotate(-0.93deg);
+          transform: rotate(-0.93deg);
+}
+
+section.uranus .max-width .uranus .miranda span {
+  position: absolute;
+  top: -25px;
+  right: -40px;
+  -webkit-transform: rotate(10deg);
+          transform: rotate(10deg);
+}
+
+section.uranus .max-width .uranus .umbriel {
+  width: 50px;
+  height: 50px;
+  background: url(../media/images/titan.png) center;
+  background-size: cover;
+  -webkit-transform: rotate(0);
+          transform: rotate(0);
+}
+
+section.uranus .max-width .uranus .umbriel span {
+  position: absolute;
+  top: -25px;
+  right: -40px;
+  -webkit-transform: rotate(10deg);
+          transform: rotate(10deg);
+}
+
+section.uranus .max-width .uranus .ariel {
+  width: 50px;
+  height: 50px;
+  background: url(../media/images/dione.jpg) center;
+  background-size: cover;
+  -webkit-transform: rotate(0);
+          transform: rotate(0);
+}
+
+section.uranus .max-width .uranus .ariel span {
+  position: absolute;
+  top: -25px;
+  right: -40px;
+  -webkit-transform: rotate(10deg);
+          transform: rotate(10deg);
+}
+
+section.uranus .max-width .information {
+  margin-top: 30px;
+}
+
+section.neptune .max-width .neptune {
+  background: url(../media/images/neptune.png) center;
+  background-size: cover;
+  width: 510px;
+  height: 510px;
+  margin: 0 0 0 -150px;
+  -webkit-transform: rotate(-2.485deg);
+          transform: rotate(-2.485deg);
+  -webkit-box-shadow: inset 0 0 20px #000, 0 0 50px #8dcdd870;
+          box-shadow: inset 0 0 20px #000, 0 0 50px #8dcdd870;
+  position: relative;
+}
+
+section.neptune .max-width .neptune .triton {
+  width: 50px;
+  height: 50px;
+  background: url(../media/images/triton.png) center;
+  background-size: cover;
+  -webkit-transform: rotate(-0.93deg);
+          transform: rotate(-0.93deg);
+}
+
+section.neptune .max-width .neptune .triton span {
+  position: absolute;
+  top: -25px;
+  right: -40px;
+  -webkit-transform: rotate(10deg);
+          transform: rotate(10deg);
+}
+
+section.neptune .max-width .neptune .proteus {
+  width: 50px;
+  height: 50px;
+  background: url(../media/images/proteus.jpg) center;
+  background-size: cover;
+  -webkit-transform: rotate(0);
+          transform: rotate(0);
+}
+
+section.neptune .max-width .neptune .proteus span {
+  position: absolute;
+  top: -25px;
+  right: -40px;
+  -webkit-transform: rotate(10deg);
+          transform: rotate(10deg);
+}
+
+section.neptune .max-width .neptune .nereid {
+  width: 50px;
+  height: 50px;
+  background: url(../media/images/nereid.jpg) center;
+  background-size: cover;
+  -webkit-transform: rotate(0);
+          transform: rotate(0);
+}
+
+section.neptune .max-width .neptune .nereid span {
+  position: absolute;
+  top: -25px;
+  right: -40px;
+  -webkit-transform: rotate(10deg);
+          transform: rotate(10deg);
+}
+
+section.neptune .max-width .information {
+  margin-top: 70px;
+}
+
+section.pluto .max-width .pluto {
+  background: url(../media/images/pluto.png) center;
+  background-size: cover;
+  width: 150px;
+  height: 150px;
+  margin-top: 70px;
+  -webkit-transform: rotate(-17.16deg);
+          transform: rotate(-17.16deg);
+  -webkit-box-shadow: inset 0 0 20px #000, 0 0 50px #ff873250;
+          box-shadow: inset 0 0 20px #000, 0 0 50px #ff873250;
+}
+
+footer {
+  padding: 20px;
+}
+
+footer .max-width {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 450px) {
+  footer .max-width {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+}
+
+footer .max-width .left span a {
+  color: #0077ff;
+}
+
+@media (max-width: 450px) {
+  footer .max-width .right {
+    margin-bottom: 20px;
+  }
+}
+
+footer .max-width .right i {
+  font-size: 20px;
+  margin: 0 10px;
+}
+
+footer .max-width .right i:hover {
+  color: #0077ff;
+}
+/*# sourceMappingURL=style.css.map */
