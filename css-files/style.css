@@ -17,7 +17,6 @@
     -ms-grid-column: 1;
     -ms-grid-column-span: 1;
     grid-area: 1 / 1 / span 1 / span 1;
-    direction: rtl;
   }
 }
 
