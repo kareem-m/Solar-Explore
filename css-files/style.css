@@ -1,4 +1,26 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;0,800;0,900;1,300;1,400&display=swap");
+@media (min-width: 980px) {
+  section.mercury .max-width div:nth-of-type(1), section.earth .max-width div:nth-of-type(1), section.jupiter .max-width div:nth-of-type(1), section.uranus .max-width div:nth-of-type(1), section.pluto .max-width div:nth-of-type(1) {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-area: 1 / 2 / span 1 / span 1;
+    margin-left: 150px;
+  }
+}
+
+@media (min-width: 980px) {
+  section.mercury .max-width .information, section.earth .max-width .information, section.jupiter .max-width .information, section.uranus .max-width .information, section.pluto .max-width .information {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-area: 1 / 1 / span 1 / span 1;
+    direction: rtl;
+  }
+}
+
 body {
   background-color: #000;
   color: #fff;
@@ -551,6 +573,13 @@ section.jupiter .max-width .jupiter .europa {
           transform: rotate(0);
 }
 
+@media (min-width: 980px) {
+  section.jupiter .max-width .jupiter .europa {
+    top: 450px !important;
+    right: 450px !important;
+  }
+}
+
 section.jupiter .max-width .jupiter .europa span {
   position: absolute;
   top: -25px;
@@ -566,6 +595,13 @@ section.jupiter .max-width .jupiter .ganymede {
   background-size: cover;
   -webkit-transform: rotate(0);
           transform: rotate(0);
+}
+
+@media (min-width: 980px) {
+  section.jupiter .max-width .jupiter .ganymede {
+    top: 180px !important;
+    right: 600px !important;
+  }
 }
 
 section.jupiter .max-width .jupiter .ganymede span {
@@ -717,6 +753,13 @@ section.uranus .max-width .uranus .ariel {
   background-size: cover;
   -webkit-transform: rotate(0);
           transform: rotate(0);
+}
+
+@media (min-width: 980px) {
+  section.uranus .max-width .uranus .ariel {
+    top: 180px !important;
+    right: 400px !important;
+  }
 }
 
 section.uranus .max-width .uranus .ariel span {

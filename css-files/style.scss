@@ -39,6 +39,20 @@ $plutoColor: #ff8732;
 }
 // End important mixins
 // Strat Global values
+%reverse {
+  div:nth-of-type(1) {
+    @media (min-width: 980px) {
+      grid-area: 1 / 2 / span 1 / span 1;
+      margin-left: 150px;
+    }
+  }
+  .information {
+    @media (min-width: 980px) {
+      grid-area: 1 / 1 / span 1 / span 1;
+      direction: rtl;
+    }
+  }
+}
 body {
   background-color: $backgroundColor;
   color: #fff;
@@ -201,7 +215,6 @@ nav {
         position: fixed;
         top: $navHeight;
         right: -201px;
-        // background-color: #fff;
         background-color: #00000050;
         padding: 15px;
         li {
@@ -314,6 +327,7 @@ section.sun {
 // Start Mercury
 section.mercury {
   .max-width {
+    @extend %reverse;
     .mercury {
       background: url(../media/images/mercury.jpg) center;
       background-size: cover;
@@ -342,6 +356,7 @@ section.venus {
 // Start earth
 section.earth {
   .max-width {
+    @extend %reverse;
     .earth {
       background: url(../media/images/earth.jpg) center;
       background-size: cover;
@@ -429,6 +444,7 @@ section.mars {
 // Start jupiter
 section.jupiter {
   .max-width {
+    @extend %reverse;
     .jupiter {
       background: url(../media/images/jupiter.jpg) center;
       background-size: cover;
@@ -456,6 +472,10 @@ section.jupiter {
         background: url(../media/images/europa.jpg) center;
         background-size: cover;
         transform: rotate(0);
+        @media (min-width: 980px) {
+          top: 450px !important;
+          right: 450px !important;
+        }
         span {
           position: absolute;
           top: -25px;
@@ -469,6 +489,10 @@ section.jupiter {
         background: url(../media/images/titan.png) center;
         background-size: cover;
         transform: rotate(0);
+        @media (min-width: 980px) {
+          top: 180px !important;
+          right: 600px !important;
+        }
         span {
           position: absolute;
           top: -25px;
@@ -557,6 +581,7 @@ section.saturn {
 // Start uranus
 section.uranus {
   .max-width {
+    @extend %reverse;
     .uranus {
       background: url(../media/images/uranus.png) center;
       background-size: cover;
@@ -598,6 +623,10 @@ section.uranus {
         background: url(../media/images/dione.jpg) center;
         background-size: cover;
         transform: rotate(0);
+        @media (min-width: 980px) {
+          top: 180px !important;
+          right: 400px !important;
+        }
         span {
           position: absolute;
           top: -25px;
@@ -673,6 +702,7 @@ section.neptune {
 // Start pluto
 section.pluto {
   .max-width {
+    @extend %reverse;
     .pluto {
       background: url(../media/images/pluto.png) center;
       background-size: cover;
